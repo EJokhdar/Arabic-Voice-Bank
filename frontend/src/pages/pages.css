@@ -1,0 +1,778 @@
+.Signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form {
+  padding: 0px 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background: rgb(69, 202, 215);
+  background: radial-gradient(
+    circle,
+    rgba(69, 202, 215, 1) 30%,
+    rgba(101, 134, 172, 1) 85%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.errorMessage {
+  color: red;
+  max-width: 191px;
+  text-align: center;
+}
+
+.upper-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Setting the size of the upper layer to 80% of the screen size*/
+  width: 85vw;
+  padding: 50px;
+  margin-top: 150px;
+
+  /*the alpha value controls the transparency*/
+  background: rgba(255, 255, 255, 0.3);
+
+  /* This controls the blurring effect*/
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+
+  /*Adding the shadow*/
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+
+  /* Adding our borders*/
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 4;
+}
+
+.registerBtn {
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-style: none;
+}
+
+.signInBtn {
+  border-radius: 10px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-style: none;
+}
+
+.signInBtn:active,
+.registerBtn:active {
+  background-color: #e6e6e6;
+  box-shadow: none;
+}
+
+.signInBtn:hover,
+.registerBtn:hover {
+  cursor: pointer;
+}
+
+.aboutTxt {
+  display: flex;
+  min-width: 800px;
+  margin-bottom: 100px;
+}
+
+.redirect {
+  text-align: center;
+  color: black;
+}
+
+.bottomSide {
+  font-size: 50px;
+}
+
+.hereBtn {
+  border-radius: 10px;
+  font-size: 50px;
+  text-decoration: none;
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-style: none;
+}
+
+h1 {
+  color: #426696;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+h2,
+p {
+  color: #658ec6;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+h3 {
+  color: #426696;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 50px;
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  display: flex;
+  width: 85vw;
+  height: 45vw;
+}
+
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+}
+.link {
+  display: flex;
+  margin: 1rem 0rem;
+  padding: 1rem 5rem;
+  align-items: center;
+  direction: rtl;
+}
+.link h2 {
+  padding: 0rem 2rem;
+}
+
+.profileImg {
+  width: 50px;
+  height: 50px;
+  filter: opacity(0.5) drop-shadow(0 0 0 rgb(28, 3, 252));
+}
+
+.dashboardPage {
+  flex: 2;
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.dashboard-links {
+  text-decoration: none;
+}
+
+.record {
+  background: rgba(101, 134, 172, 1) 85%;
+  border-radius: 2rem;
+  color: white;
+  padding: 1rem;
+  position: relative;
+  width: 250px;
+}
+
+.passageImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+.record h2 {
+  width: 40%;
+  color: white;
+  font-weight: 600;
+}
+
+.microphoneImg {
+  position: absolute;
+  bottom: 25%;
+  right: 10%;
+  width: 100px;
+  height: 100px;
+  filter: opacity(0.5) drop-shadow(0 0 0 rgb(28, 3, 252));
+}
+
+.status {
+  margin-bottom: 3rem;
+}
+
+.status h1 {
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 1rem;
+  margin: 2rem 0rem;
+  padding: 2rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: space-between;
+}
+
+.passageTitle {
+  direction: rtl;
+}
+
+.progress {
+  background: rgb(32, 164, 177);
+  background: linear-gradient(
+    333deg,
+    rgba(32, 164, 177, 1) 7%,
+    rgba(101, 134, 172, 1) 23%
+  );
+  width: 300px;
+  height: 25%;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-recording-page {
+  background: rgb(32, 164, 177);
+  background: linear-gradient(
+    333deg,
+    rgba(32, 164, 177, 1) 7%,
+    rgba(101, 134, 172, 1) 23%
+  );
+  width: 500px;
+  height: 25%;
+  margin: auto;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recording-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* Setting the size of the upper layer to 80% of the screen size*/
+  height: 80vh;
+  width: 85vw;
+  padding: 40px;
+  margin-top: 50px;
+
+  /*the alpha value controls the transparency*/
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+
+  /* This controls the blurring effect*/
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+
+  /*Adding the shadow*/
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18);
+
+  /* Adding our borders*/
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 4;
+}
+
+.message-container {
+  padding-top: 2.5em;
+  text-align: center;
+}
+
+/* Keyboard style */
+.keyboard {
+  padding: 2.5em 0;
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  direction: rtl;
+}
+
+.keyboard button {
+  margin: 15px;
+  background: rgba(101, 134, 172, 1) 85%;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 30px;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.keyboard button:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: 0.1s;
+}
+
+.back-btn {
+  position: absolute;
+  margin-right: 85%;
+  margin-bottom: 70vh;
+  padding: 10px;
+  background: rgba(101, 134, 172, 1) 85%;
+  border-radius: 8px;
+}
+
+.back-btn h2 {
+  margin: 0;
+  color: white;
+}
+
+.progress-bar {
+  background: rgb(32, 164, 177);
+  background: linear-gradient(
+    333deg,
+    rgba(32, 164, 177, 1) 7%,
+    rgba(101, 134, 172, 1) 23%
+  );
+  width: 1200px;
+  height: 20px;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgb(180, 178, 178);
+  position: absolute;
+  right: 80%;
+}
+
+.card-home p {
+  width: 600px;
+  color: black;
+  font-size: 20px;
+  direction: rtl;
+}
+
+.solve {
+  width: 600px;
+  height: 400px;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.alfaisal {
+  width: 600px;
+  height: 400px;
+  border-radius: 10px;
+  margin-top: 80px;
+  margin-left: 100px;
+}
+
+.campus {
+  width: 600px;
+  height: 400px;
+  border-radius: 10px;
+  margin-top: 80px;
+  margin-left: 100px;
+}
+
+.card-home a {
+  text-decoration: none;
+}
+
+.card-home {
+  display: flex;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.text-home {
+  padding: 0 2rem;
+}
+
+.prompt h1 {
+  color: black;
+}
+
+.card-home h1 {
+  padding: 0;
+  text-align: right;
+}
+
+.card-home ul {
+  direction: rtl;
+}
+
+.card-home ul li {
+  padding: 5px;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1550px) {
+  .card-home {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-home h1 {
+    text-align: center;
+    font-size: xx-large;
+  }
+
+  .card-home p {
+    text-align: right;
+    width: auto;
+  }
+
+  h1 {
+    font-size: xx-large;
+  }
+
+  h2 {
+    font-size: large;
+  }
+
+  .dashboard {
+    width: 200px;
+  }
+
+  .profileImg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .passageImg {
+    max-width: 70px;
+    max-height: 70px;
+    min-width: 60px;
+    min-height: 60px;
+  }
+
+  .microphoneImg {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: auto;
+  }
+
+  .record {
+    width: 60px;
+    height: 60px;
+  }
+
+  .record h2 {
+    display: none;
+  }
+
+  .card-info .progress {
+    display: none;
+  }
+
+  /* .progress-recording-page {
+    display: none;
+  }
+
+  .progress-completed-recording-page {
+    display: none;
+  } */
+
+  .progress-bar {
+    display: none;
+  }
+  .keyboard button {
+    font-size: 20px;
+    padding: auto;
+  }
+}
+
+/* Media query for tablets and phones */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: x-large;
+  }
+
+  h2 {
+    font-size: large;
+  }
+
+  .dashboard {
+    width: 100px;
+  }
+
+  .profileImg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .passageImg {
+    display: none;
+  }
+
+  .card {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .microphoneImg {
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    bottom: auto;
+  }
+
+  .link h2 {
+    display: none;
+  }
+
+  .record {
+    width: 60px;
+    height: 60px;
+  }
+
+  .record h2 {
+    display: none;
+  }
+
+  .card-info .progress {
+    display: none;
+  }
+
+  .upper-layer {
+    margin-left: 20px;
+    width: 600px;
+  }
+
+  .card-home {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+  }
+  .card-home img {
+    margin: 0;
+    width: 500px;
+    height: 275px;
+  }
+
+  .about-project {
+    padding-left: 0px;
+  }
+
+  .card-home h1 {
+    text-align: center;
+    font-size: 25px;
+    padding: 0;
+  }
+  .card-home p {
+    width: 500px;
+  }
+  .progress-bar {
+    display: none;
+  }
+
+  /* .progress-recording-page {
+    display: none;
+  }
+
+  .progress-completed-recording-page {
+    display: none;
+  } */
+  .keyboard button {
+    font-size: 16px;
+    padding: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    height: fit-content;
+  }
+
+  .dashboardPage {
+    margin: 0;
+    height: fit-content;
+  }
+
+  h1 {
+    font-size: x-large;
+  }
+
+  h2 {
+    font-size: large;
+  }
+
+  .status h1 {
+    display: none;
+  }
+
+  .dashboard {
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+
+  .profileImg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .passageImg {
+    display: none;
+  }
+
+  .card {
+    margin: 10px;
+    padding: 5px;
+  }
+
+  /* .progress-recording-page {
+    display: none;
+  }
+
+  .progress-completed-recording-page {
+    display: none;
+  } */
+
+  .microphoneImg {
+    width: 20px;
+    height: 20px;
+    right: 11px;
+    bottom: 10px;
+  }
+
+  .links {
+    display: flex;
+  }
+
+  .link {
+    padding: 0 2rem;
+  }
+
+  .link h2 {
+    display: none;
+  }
+
+  .record {
+    width: 10px;
+    height: 10px;
+  }
+
+  .record h2 {
+    display: none;
+  }
+
+  .card-info .progress {
+    display: none;
+  }
+
+  .upper-layer {
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  .card-home {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+  }
+
+  .card-home img {
+    margin: 0;
+    width: 300px;
+    height: 150px;
+  }
+
+  .about-project {
+    padding-left: 0px;
+  }
+
+  .card-home h1 {
+    text-align: center;
+    font-size: 25px;
+    padding: 0;
+  }
+  .card-home p {
+    text-align: center;
+    width: 300px;
+  }
+  .progress-bar {
+    display: none;
+  }
+  .keyboard button {
+    font-size: 0;
+    padding: auto;
+  }
+
+  .back-btn {
+    margin-left: 10px;
+  }
+
+  .back-btn h2 {
+    padding: 1px 1px;
+    font-size: 0;
+  }
+}

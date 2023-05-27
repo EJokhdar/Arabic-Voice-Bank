@@ -1,0 +1,41 @@
+version: "3.8"
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=YclH9QA5OXJq
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend/
+      dockerfile: ./Dockerfile
+    command: bash -c "uvicorn main:app --host 0.0.0.0 --port 8000 --reload"
+    restart: always
+    ports:
+      - 8000:8000
+    environment:
+      - DB_URI=######
+      - AWS_ACCESS_KEY_ID=######
+      - AWS_ACCESS_SECRET_KEY=######
+    expose:
+      - 8000
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend/
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - "127.0.0.1:3006:3006"
+    expose:
+      - 3006
+
+volumes:
+  postgres:
