@@ -26,4 +26,4 @@ Optional: Create a virtual environment in the backend directory by running the c
 1. In the terminal, go into the frontend directory, and run the command "npm start"
   
   
-  #### DB_URI, and AWS Keys have been removed from the code and Dockerfile
+  #### DB_URI, and AWS Keys have been removed from the code and Dockerfile because the trail for the Amazon S3 and Database expired
